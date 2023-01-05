@@ -1,4 +1,4 @@
-# libraries.cpu.cpuFreqLib
+# Intel® CPU Frequency Library
 A simple library to sample the frequency on single CPU cores.
 The frequency is sampled by computing the ratio of actual performed cycles to the cycles that have passed in base frequency according to rdtsc.
 
