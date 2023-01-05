@@ -24,7 +24,7 @@ find_package(cpufreqlib
 target_link_libraries(your_target
                       PRIVATE cpufreqlib)             
 ```
-In order to sample the current CPU frequency call:
+In order to sample the current frequency of the current core call:
 ```cpp
 #include <cpufreqlib.h>
 // ...
@@ -32,4 +32,4 @@ float base_freq = get_base_cpu_freq_hz(); // get base frequency
 // ...
 float freq = get_curr_cpu_freq_hz(); // get current frequency
 ```
-**Note that SMT might lead to false measurements**
+**Note that sampling on two SMT threads of the same physical CPU might lead to false measurements**
