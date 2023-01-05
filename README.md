@@ -16,7 +16,7 @@ cmake --install .
 
 # Usage
 
-Find library in CMake:
+To include the library in CMake:
 ```cmake
 find_package(cpufreqlib   
               HINTS 
@@ -24,7 +24,7 @@ find_package(cpufreqlib
 target_link_libraries(your_target
                       PRIVATE cpufreqlib)             
 ```
-Measure frequency in code:
+In order to sample the current CPU frequency call:
 ```cpp
 #include <cpufreqlib.h>
 // ...
@@ -32,3 +32,4 @@ float base_freq = get_base_cpu_freq_hz(); // get base frequency
 // ...
 float freq = get_curr_cpu_freq_hz(); // get current frequency
 ```
+**Note that SMT might lead to false measurements**
