@@ -24,7 +24,8 @@ find_package(cpufreqlib
 target_link_libraries(your_target
                       PRIVATE cpufreqlib)             
 ```
-In order to sample the current frequency of the current core call:
+
+To sample the current frequency of the current core call:
 ```cpp
 #include <cpufreqlib.h>
 // ...
